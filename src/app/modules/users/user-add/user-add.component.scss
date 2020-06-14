@@ -1,0 +1,25 @@
+form.form-container {
+    border: 1px solid #f1f1f1;
+    padding: 15px;
+
+    .container-flex{
+        display: flex;
+        flex-wrap: wrap;
+
+        .form-group{
+            flex:1 1 280px;
+            justify-content: space-between;
+        }
+        
+        button[type=submit]{
+            background-color: #f3780f;
+            color: white;
+            margin: 8px 0;
+            border: 1px solid #f3780f;
+            cursor: pointer;
+            margin-top: 26px;
+            height: 41px;
+            width: auto;
+        }
+    }
+}

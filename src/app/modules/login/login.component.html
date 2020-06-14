@@ -1,0 +1,19 @@
+<form class="form-container" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <div class="imgcontainer">
+    <img src="/assets/img/login-avatar.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="userName" formControlName="userName">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+        
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="rememberMe" formControlName="rememberMe"> Remember me
+    </label>
+  </div>
+ 
+</form>

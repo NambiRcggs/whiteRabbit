@@ -1,0 +1,29 @@
+<section class="user-list container">
+    <app-user-add (newUserAdded)="populateNewkyAdded($event)"></app-user-add>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>DOB</th>
+            <th>Phone</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let userObj of userList">
+                <td *ngIf="!userObj?.user?.name?.fullName">{{userObj.user?.name?.title | titlecase }}. {{userObj.user?.name?.first | titlecase }}
+                    {{userObj.user?.name?.last | titlecase }}</td>
+                    
+                <td *ngIf="userObj?.user?.name?.fullName" [innerHtml]="userObj.user?.name?.fullName | titlecase ">Name</td>
+                <td [innerHtml]="userObj.user?.gender | titlecase ">{{userObj.user}}</td>
+                <td [innerHTML]="userObj.user?.email">Email</td>
+                <td [innerHTML]="userObj.user?.username">username</td>
+                <td [innerHTML]="userObj.user?.password">password</td>
+                <td [innerHTML]="userObj.user?.dob | date">Date</td>
+                <td [innerHTML]="userObj.user?.phone">Phone</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>

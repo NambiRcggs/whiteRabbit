@@ -1,0 +1,44 @@
+<h1>Add New Record</h1>
+
+<form class="form-container" [formGroup]="addUser" (ngSubmit)="onAdd()">
+
+    <div class="container-flex">
+        <div class="form-group">
+            <label for="uname"><b>Name</b></label>
+            <input type="text" placeholder="Name" name="userName" formControlName="name">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>Gender</b></label>
+            <input type="text" placeholder="Gender" name="gender" formControlName="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>Email</b></label>
+            <input type="email" placeholder="Email" name="email" formControlName="email">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>User Name</b></label>
+            <input type="text" placeholder="User Name" name="username" formControlName="username">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="password" formControlName="password">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>DOB</b></label>
+            <input type="date" placeholder="mm/dd/yyyy" name="dob" formControlName="dob">
+        </div>
+
+        <div class="form-group">
+            <label for="psw"><b>Phone</b></label>
+            <input type="text" placeholder="Phone" name="phone" formControlName="phone">
+        </div>
+
+        <button type="submit" [disabled]="!addUser.valid">Add New</button>
+    </div>
+
+</form>
