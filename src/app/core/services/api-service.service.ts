@@ -18,6 +18,7 @@ export class ApiServiceService {
   login(data){
     console.log(loginJson);
     if(data.userName == loginJson.username && data.password == loginJson.password){
+      this.instanceMutation.setLocalStorage('auth',data);
       return true;
     }else{
       return false;
